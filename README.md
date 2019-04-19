@@ -5,7 +5,7 @@ This is a libary that handles content negotiation in web applications written in
 
 ### Simple
 To return JSON/XML out of the box simple put this in your route handler:
-```
+```go
 func getUser(w http.ResponseWriter, req *http.Request) {
     user := &User{"Joe","Bloggs"}
     if err := negotiator.Negotiate(w, req, user); err != nil {
